@@ -10,6 +10,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'cp /var/lib/jenkins/deploy/deploy-init.sh .'
                 sh 'cp /var/lib/jenkins/deploy/rom-doc/deploy.sh .'
             }
         }
@@ -21,6 +22,8 @@ pipeline {
                 }
             }
             steps {
+                sh 'chmod 700 ./deploy-init.sh'
+                sh './deploy-init.sh'
                 sh 'chmod 700 ./deploy.sh'
                 sh './deploy.sh ${BRANCH_NAME}'
             }
