@@ -3,7 +3,7 @@ nav:
   title: Backend
   path: /Backend
 group:
-  title: Node
+  title: Deno
 title: 前言
 ---
 # 前言
